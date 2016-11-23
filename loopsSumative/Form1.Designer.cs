@@ -28,12 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.startLabel = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // startLabel
+            // 
+            this.startLabel.Font = new System.Drawing.Font("OCR A Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startLabel.ForeColor = System.Drawing.Color.Lime;
+            this.startLabel.Location = new System.Drawing.Point(12, 9);
+            this.startLabel.Name = "startLabel";
+            this.startLabel.Size = new System.Drawing.Size(266, 24);
+            this.startLabel.TabIndex = 0;
+            this.startLabel.Text = "CLICK SCREEN TO START";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlText;
+            this.ClientSize = new System.Drawing.Size(620, 433);
+            this.Controls.Add(this.startLabel);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.Click += new System.EventHandler(this.Form1_Click);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label startLabel;
     }
 }
 
