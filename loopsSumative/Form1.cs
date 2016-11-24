@@ -38,18 +38,28 @@ namespace loopsSumative
             {
                 fg.DrawString(line2.Substring(0, n), drawFont, drawBrush, 10, 40);
                 Thread.Sleep(100);
+                
             }
             string line3 = "You need to fly by and drop the bomb in the opening.";
             for (int x = 0; x <= line3.Length; x++)
             {
                 fg.DrawString(line3.Substring(0, x), drawFont, drawBrush, 10, 60);
                 Thread.Sleep(100);
+                
             }
             string line4 = "The main reactor is exposed there. Good Luck.";
             for (int a = 0; a <= line4.Length; a++)
             {
                 fg.DrawString(line4.Substring(0, a), drawFont, drawBrush, 10, 80);
                 Thread.Sleep(100);
+               
+            }
+            string line5 = "<<INITIALIZING SIMULATION>>";
+            for (int a = 0; a <= line5.Length; a++)
+            {
+                fg.DrawString(line5.Substring(0, a), drawFont, drawBrush, 50, 120);
+                Thread.Sleep(100);
+                
             }
 
 
