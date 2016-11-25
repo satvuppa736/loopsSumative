@@ -27,36 +27,40 @@ namespace loopsSumative
             SolidBrush blackBrush = new SolidBrush(Color.Black);
             Pen silverPen = new Pen(Color.Silver, 3);
             SolidBrush shipBrush = new SolidBrush(Color.SlateBlue);
+            SolidBrush bombBrush = new SolidBrush(Color.Red);
+            SolidBrush explosion = new SolidBrush(Color.OrangeRed);
+          
+
 
             string line1 = "Your mission is as follows:";
 
-            for (int i = 0; i <= line1.Length; i++)
-            {
-                fg.DrawString(line1.Substring(0, i), drawFont, limeGreenBrush, 10, 20);
-                Thread.Sleep(100);
-            }
+            //for (int i = 0; i <= line1.Length; i++)
+            //{
+            //    fg.DrawString(line1.Substring(0, i), drawFont, limeGreenBrush, 10, 20);
+            //    Thread.Sleep(100);
+            //}
 
-            string line2 = "The Death Star needs to be destroyed";
-            for (int n = 0; n <= line2.Length; n++)
-            {
-                fg.DrawString(line2.Substring(0, n), drawFont, limeGreenBrush, 10, 40);
-                Thread.Sleep(100);
+            //string line2 = "The Death Star needs to be destroyed";
+            //for (int n = 0; n <= line2.Length; n++)
+            //{
+            //    fg.DrawString(line2.Substring(0, n), drawFont, limeGreenBrush, 10, 40);
+            //    Thread.Sleep(100);
 
-            }
-            string line3 = "You need to fly by and drop the bomb in the opening.";
-            for (int x = 0; x <= line3.Length; x++)
-            {
-                fg.DrawString(line3.Substring(0, x), drawFont, limeGreenBrush, 10, 60);
-                Thread.Sleep(100);
+            //}
+            //string line3 = "You need to fly by and drop the bomb in the opening.";
+            //for (int r = 0; r <= line3.Length; r++)
+            //{
+            //    fg.DrawString(line3.Substring(0, r), drawFont, limeGreenBrush, 10, 60);
+            //    Thread.Sleep(100);
 
-            }
-            string line4 = "The main reactor is exposed there. Good Luck.";
-            for (int a = 0; a <= line4.Length; a++)
-            {
-                fg.DrawString(line4.Substring(0, a), drawFont, limeGreenBrush, 10, 80);
-                Thread.Sleep(100);
+            //}
+            //string line4 = "The main reactor is exposed there. Good Luck.";
+            //for (int a = 0; a <= line4.Length; a++)
+            //{
+            //    fg.DrawString(line4.Substring(0, a), drawFont, limeGreenBrush, 10, 80);
+            //    Thread.Sleep(100);
 
-            }
+            //}
             string line5 = "<<INITIALIZING SIMULATION>>";
             for (int a = 0; a <= line5.Length; a++)
             {
@@ -388,7 +392,7 @@ namespace loopsSumative
             //#endregion
             #endregion
 
-            for (int x = 0; x <= 10; x++)
+            for (int w = 0; w <= 10; w++)
             {
                 fg.DrawString(line5, drawFont, blackBrush, 50, 120);
                 Thread.Sleep(300);
@@ -400,18 +404,45 @@ namespace loopsSumative
 
             fg.Clear(Color.Black);
 
-            for (int x = 667; x>=338; x= x-2)
+            int x;
+            int y = 125;
+
+            for (x = 667; x>=330; x= x-2)
             {
                 fg.DrawEllipse(silverPen, 200, 150, 250, 250);
                 fg.DrawLine(silverPen, 330, 150, 330, 275);
 
-                fg.FillRectangle(shipBrush, x, 125, 15, 15);
+                fg.FillRectangle(shipBrush, x, 115, 18, 18);
                 Thread.Sleep(20);
                 fg.Clear(Color.Black);
             }
+            for (y = 125; y<= 275; y++)
+            {
 
-            for(int y = 150; y<= 275; y++) { }
+                fg.DrawEllipse(silverPen, 200, 150, 250, 250);
+                fg.DrawLine(silverPen, 330, 150, 330, 275);
+                fg.FillRectangle(shipBrush, x, 115, 18, 18);
 
+                fg.FillRectangle(bombBrush, 329, y -1, 10, 10);
+                Thread.Sleep(10);
+                fg.Clear(Color.Black);
+                x--;
+            }
+            for (int s = 1; s <= 300; s = s + 2)
+            {
+                fg.DrawEllipse(silverPen, 200, 150, 250, 250);
+                fg.DrawLine(silverPen, 330, 150, 330, 275);
+                fg.FillRectangle(shipBrush, x, 115, 18, 18);
+
+                fg.FillRectangle(bombBrush, 329, y, 10, 10);
+
+                fg.FillEllipse(explosion, 329 - s / 2, y - s / 2, 10 +s, 10+s);
+
+                Thread.Sleep(10);
+                fg.Clear(Color.Black);
+                x--;
+            }
+          
         }
     }
 }
