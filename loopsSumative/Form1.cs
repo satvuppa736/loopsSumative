@@ -35,7 +35,8 @@ namespace loopsSumative
             SoundPlayer starWarsPlayer = new SoundPlayer(Properties.Resources.starWars);
             SoundPlayer recordPlayer = new SoundPlayer(Properties.Resources.recordScratch);
             #endregion
-
+            
+            #region INTRO SEQUENCE
             fg.Clear(Color.Black);
 
             starTrekPlayer.Play();
@@ -56,13 +57,13 @@ namespace loopsSumative
                 Thread.Sleep(70);
             }
             starTrekPlayer.Stop();
-            fg.DrawString("OOPS WRONG SONG!");
+            fg.DrawString("OOPS WRONG SONG!", drawFont, limeGreenBrush, 10, 20);
             Thread.Sleep(2000);
             starWarsPlayer.Play();
+            fg.Clear(Color.Black);
+            fg.DrawString("SO MUCH BETTER!", drawFont, limeGreenBrush, 10, 20);
+            Thread.Sleep(2000);
 
-
-
-            #region INTRO SEQUENCE
             fg.Clear(Color.Black);
             string line1 = "Your mission is as follows:";
             for (int i = 0; i <= line1.Length; i++)
@@ -167,6 +168,7 @@ namespace loopsSumative
             #endregion
 
             #region OUTRO
+            starWarsPlayer.Stop();
             string line6 = "Now Go Young Jedi";
             for (int a = 0; a <= line6.Length; a++)
             {
@@ -182,6 +184,7 @@ namespace loopsSumative
                 fg.DrawString(line7.Substring(0, u), drawFont, limeGreenBrush, 10, 220);
                 Thread.Sleep(70);
             }
+            
             #endregion
         }
     }
