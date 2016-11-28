@@ -34,48 +34,48 @@ namespace loopsSumative
 
 
             #region INTRO SEQUENCE
-            //string line1 = "Your mission is as follows:";
+            string line1 = "Your mission is as follows:";
 
-            //for (int i = 0; i <= line1.Length; i++)
-            //{
-            //    fg.DrawString(line1.Substring(0, i), drawFont, limeGreenBrush, 10, 20);
-            //    Thread.Sleep(70);
-            //}
+            for (int i = 0; i <= line1.Length; i++)
+            {
+                fg.DrawString(line1.Substring(0, i), drawFont, limeGreenBrush, 10, 20);
+                Thread.Sleep(70);
+            }
 
-            //string line2 = "The Death Star needs to be destroyed";
-            //for (int n = 0; n <= line2.Length; n++)
-            //{
-            //    fg.DrawString(line2.Substring(0, n), drawFont, limeGreenBrush, 10, 40);
-            //    Thread.Sleep(70);
+            string line2 = "The Death Star needs to be destroyed";
+            for (int n = 0; n <= line2.Length; n++)
+            {
+                fg.DrawString(line2.Substring(0, n), drawFont, limeGreenBrush, 10, 40);
+                Thread.Sleep(70);
 
-            //}
-            //string line3 = "You need to fly by and drop the bomb in the opening.";
-            //for (int r = 0; r <= line3.Length; r++)
-            //{
-            //    fg.DrawString(line3.Substring(0, r), drawFont, limeGreenBrush, 10, 60);
-            //    Thread.Sleep(70);
+            }
+            string line3 = "You need to fly by and drop the bomb in the opening.";
+            for (int r = 0; r <= line3.Length; r++)
+            {
+                fg.DrawString(line3.Substring(0, r), drawFont, limeGreenBrush, 10, 60);
+                Thread.Sleep(70);
 
-            //}
-            //string line4 = "The main reactor is exposed there. Good Luck.";
-            //for (int a = 0; a <= line4.Length; a++)
-            //{
-            //    fg.DrawString(line4.Substring(0, a), drawFont, limeGreenBrush, 10, 80);
-            //    Thread.Sleep(70);
+            }
+            string line4 = "The main reactor is exposed there. Good Luck.";
+            for (int a = 0; a <= line4.Length; a++)
+            {
+                fg.DrawString(line4.Substring(0, a), drawFont, limeGreenBrush, 10, 80);
+                Thread.Sleep(70);
 
-            //}
-            //string line5 = "<<INITIALIZING SIMULATION>>";
-            //for (int a = 0; a <= line5.Length; a++)
-            //{
-            //    fg.DrawString(line5.Substring(0, a), drawFont, limeGreenBrush, 50, 120);
-            //}
-            //for (int w = 0; w <= 6; w++)
-            //{
-            //    fg.DrawString(line5, drawFont, blackBrush, 50, 120);
-            //    Thread.Sleep(300);
-            //    fg.DrawString(line5, drawFont, limeGreenBrush, 50, 120);
-            //    Thread.Sleep(300);
-            //}
-            //fg.Clear(Color.Black);
+            }
+            string line5 = "<<INITIALIZING SIMULATION>>";
+            for (int a = 0; a <= line5.Length; a++)
+            {
+                fg.DrawString(line5.Substring(0, a), drawFont, limeGreenBrush, 50, 120);
+            }
+            for (int w = 0; w <= 6; w++)
+            {
+                fg.DrawString(line5, drawFont, blackBrush, 50, 120);
+                Thread.Sleep(300);
+                fg.DrawString(line5, drawFont, limeGreenBrush, 50, 120);
+                Thread.Sleep(300);
+            }
+            fg.Clear(Color.Black);
             #endregion
 
             #region EXTRA CODE IF NEEDED
