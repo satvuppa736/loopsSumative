@@ -33,12 +33,12 @@
             // 
             // startLabel
             // 
-            this.startLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startLabel.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startLabel.ForeColor = System.Drawing.Color.Lime;
             this.startLabel.Location = new System.Drawing.Point(16, 11);
             this.startLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.startLabel.Name = "startLabel";
-            this.startLabel.Size = new System.Drawing.Size(355, 30);
+            this.startLabel.Size = new System.Drawing.Size(306, 30);
             this.startLabel.TabIndex = 0;
             this.startLabel.Text = "CLICK SCREEN TO START";
             // 
@@ -49,7 +49,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlText;
             this.ClientSize = new System.Drawing.Size(903, 533);
             this.Controls.Add(this.startLabel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Star Wars Battle Simulator";
             this.Click += new System.EventHandler(this.Form1_Click);
