@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.startLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -35,21 +36,20 @@
             // 
             this.startLabel.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startLabel.ForeColor = System.Drawing.Color.Lime;
-            this.startLabel.Location = new System.Drawing.Point(16, 11);
-            this.startLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.startLabel.Location = new System.Drawing.Point(12, 9);
             this.startLabel.Name = "startLabel";
-            this.startLabel.Size = new System.Drawing.Size(306, 30);
+            this.startLabel.Size = new System.Drawing.Size(230, 24);
             this.startLabel.TabIndex = 0;
             this.startLabel.Text = "CLICK SCREEN TO START";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlText;
-            this.ClientSize = new System.Drawing.Size(903, 533);
+            this.ClientSize = new System.Drawing.Size(677, 433);
             this.Controls.Add(this.startLabel);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Star Wars Battle Simulator";
             this.Click += new System.EventHandler(this.Form1_Click);
