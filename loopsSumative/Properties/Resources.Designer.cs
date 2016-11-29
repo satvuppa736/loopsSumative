@@ -63,6 +63,15 @@ namespace loopsSumative.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream explosion {
+            get {
+                return ResourceManager.GetStream("explosion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream recordScratch {
             get {
                 return ResourceManager.GetStream("recordScratch", resourceCulture);
@@ -72,18 +81,18 @@ namespace loopsSumative.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream starTrek {
+        internal static System.IO.UnmanagedMemoryStream starTrekTheme {
             get {
-                return ResourceManager.GetStream("starTrek", resourceCulture);
+                return ResourceManager.GetStream("starTrekTheme", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream starWars {
+        internal static System.IO.UnmanagedMemoryStream starWarsTheme {
             get {
-                return ResourceManager.GetStream("starWars", resourceCulture);
+                return ResourceManager.GetStream("starWarsTheme", resourceCulture);
             }
         }
     }

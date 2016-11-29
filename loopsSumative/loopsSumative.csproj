@@ -89,6 +89,15 @@
   <ItemGroup>
     <None Include="Resources\Record Scratch WITH download link.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\starWarsTheme.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\starTrekTheme.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\explosion.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -31,15 +31,18 @@ namespace loopsSumative
             SolidBrush shipBrush = new SolidBrush(Color.SlateBlue);
             SolidBrush bombBrush = new SolidBrush(Color.Red);
             SolidBrush explosion = new SolidBrush(Color.OrangeRed);
-            SoundPlayer starTrekPlayer = new SoundPlayer(Properties.Resources.starTrek);
-            SoundPlayer starWarsPlayer = new SoundPlayer(Properties.Resources.starWars);
+            SoundPlayer starTrekPlayer = new SoundPlayer(Properties.Resources.starTrekTheme);
+            SoundPlayer starWarsPlayer = new SoundPlayer(Properties.Resources.starWarsTheme);
             SoundPlayer recordPlayer = new SoundPlayer(Properties.Resources.recordScratch);
+            SoundPlayer explosionPLayer = new SoundPlayer(Properties.Resources.explosion);
             #endregion
             
             #region INTRO SEQUENCE
             fg.Clear(Color.Black);
 
             starTrekPlayer.Play();
+
+            Thread.Sleep(2000);
 
             string line0 = "Your mission is as foll";
             for (int i = 0; i <= line0.Length; i++)
@@ -48,15 +51,20 @@ namespace loopsSumative
                 fg.DrawString(line0.Substring(0, i), drawFont, limeGreenBrush, 10, 20);
                 Thread.Sleep(70);
             }
-            Thread.Sleep(2000);
+            Thread.Sleep(1000);
+
+            starTrekPlayer.Stop();
+
             recordPlayer.Play();
+            Thread.Sleep(1500);
+            recordPlayer.Stop();
+
             for (int i = line0.Length; i >= 0; i--)
             {
                 fg.Clear(Color.Black);
                 fg.DrawString(line0.Substring(0, i), drawFont, limeGreenBrush, 10, 20);
                 Thread.Sleep(70);
             }
-            starTrekPlayer.Stop();
             fg.DrawString("OOPS WRONG SONG!", drawFont, limeGreenBrush, 10, 20);
             Thread.Sleep(2000);
             starWarsPlayer.Play();
@@ -114,6 +122,7 @@ namespace loopsSumative
                 fg.DrawString(line5, drawFont, limeGreenBrush, 50, 120);
                 Thread.Sleep(300);
             }
+            starWarsPlayer.Stop();
             fg.Clear(Color.Black);
             #endregion
 
@@ -148,6 +157,7 @@ namespace loopsSumative
                 fg.Clear(Color.Black);
                 x--;
             }
+            explosionPLayer.Play();
             for (s=1; s <= 300; s = s + 2)
             {
                 fg.DrawEllipse(silverPen, 200, 150, 250, 250);
@@ -165,6 +175,7 @@ namespace loopsSumative
                 fg.Clear(Color.Black);
                 x--;
             }
+            explosionPLayer.Stop();
             #endregion
 
             #region OUTRO
