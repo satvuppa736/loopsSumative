@@ -63,6 +63,15 @@ namespace loopsSumative.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream dropSound {
+            get {
+                return ResourceManager.GetStream("dropSound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream explosion {
             get {
                 return ResourceManager.GetStream("explosion", resourceCulture);

@@ -35,6 +35,7 @@ namespace loopsSumative
             SoundPlayer starWarsPlayer = new SoundPlayer(Properties.Resources.starWarsTheme);
             SoundPlayer recordPlayer = new SoundPlayer(Properties.Resources.recordScratch);
             SoundPlayer explosionPLayer = new SoundPlayer(Properties.Resources.explosion);
+            SoundPlayer dropSoundPlayer = new SoundPlayer(Properties.Resources.dropSound);
             #endregion
             
             #region INTRO SEQUENCE
@@ -142,6 +143,8 @@ namespace loopsSumative
                 Thread.Sleep(20);
                 fg.Clear(Color.Black);
             }
+            dropSoundPlayer.Play();
+            Thread.Sleep(100);
             for (y=125; y<= 275; y++)
             {
 
@@ -157,6 +160,7 @@ namespace loopsSumative
                 fg.Clear(Color.Black);
                 x--;
             }
+            dropSoundPlayer.Stop();
             explosionPLayer.Play();
             for (s=1; s <= 300; s = s + 2)
             {
