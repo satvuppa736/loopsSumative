@@ -184,7 +184,7 @@ namespace loopsSumative
 
             #region OUTRO
             starWarsPlayer.Stop();
-            string line6 = "Now Go Young Jedi";
+            string line6 = "Now Go Young Padawan.";
             for (int a = 0; a <= line6.Length; a++)
             {
                 fg.Clear(Color.Black);
